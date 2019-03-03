@@ -1,0 +1,120 @@
+body{
+	background-color: darkseagreen;
+}
+
+#links{
+	float: right;
+}
+
+#map {	
+	width: 1534px;
+	height: 679px; 
+	border-style: solid; 
+	border-width: 1px;
+	background-image: url("map.jpg");
+	position: relative; 
+	top: 0px; 
+	left: 0px;
+}
+
+#animation{
+	width: 33px;
+	height: 72px;
+	position: absolute;
+	background-image: url("mom.png");
+	left:688px;
+	top:630px;
+
+}
+
+#point0	{
+	position: absolute; 
+	left: 663px;
+	top: 220px;
+}
+
+#point1	{
+	position: absolute; 
+	left:660px; 
+	top: 295px;
+}
+
+#point2	{
+	position: absolute; 
+	left:1030px; 
+	top: 360px;
+}
+
+#point3	{
+	position: absolute; 
+	left:700px; 
+	top: 420px;
+}
+
+#point4	{
+	position: absolute; 
+	left:660px;  
+	top: 450px;
+}
+
+
+.notes {
+	width: 20px; 
+	height: 20px; 
+	overflow: hidden; 
+	background-color: white;
+	color: white; 
+	z-index: 1;
+}
+
+.notes > a {
+	font-size: 18pt; 
+}
+
+.notes:hover {
+	width: 250px; 
+	height: auto; 
+	overflow: visible; 
+	z-index: 2;
+}
+
+h1{
+	font-size: 36px;
+	font-family: arial;
+	text-align: center;
+}
+
+#info{
+	width: 70%;
+}
+
+p{
+	font-size: 24px;
+}
+
+a {
+	color: black;
+	font-size: 20px;
+}
+
+td{
+	font-size: 18pt;
+	border: 1px solid darkblue;
+}
+
+table{
+	border-collapse: collapse;
+}
+
+#pictureofbird{
+	float: left;
+}
+
+#facts{
+	float: left;
+}
+
+#copyright{
+	text-align: center;
+}
+

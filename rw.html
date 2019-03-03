@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock Wren</title>
+	<link rel="stylesheet" type="text/css" href="thestyle.css">
+</head>
+<body>
+	<h1>Rock Wren</h1>
+	<h1>Click the picture for more images!</h1>
+	<div id ="pictureofbird">
+		<img src="rock wren 1.jpg" id="picture" onclick="changePicture()">
+	</div>
+	<script>
+		var counter = 0;
+		var birdpic = document.getElementById("picture");
+		function changePicture(){
+			if(counter == 0){
+				birdpic.src = "rock wren 1.jpg";
+				counter++;
+			} else if(counter == 1){
+				birdpic.src = "rock wren 2.jpg";
+				counter++;
+			}else if(counter == 2){
+				birdpic.src = "rock wren 3.jpg";
+				counter = 0;
+			}
+		}
+	</script>
+	<div id="facts"></div>
+	<div id="copyright"></div>
+	<script>
+		var d = new Date();
+		var n = d.getFullYear();
+		document.getElementById("copyright").innerHTML = "©" + n;
+	</script>
+</body>
+</html>

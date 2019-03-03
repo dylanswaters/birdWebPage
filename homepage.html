@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Birds of Utah</title>
+	<link rel="stylesheet" type="text/css" href="thestyle.css">
+</head>
+<body>
+<div id="links">
+		<h2>Birding Links:</h2>
+		<a href="http://www.Ebird.org">Ebird</a><br/>
+		<a href="http://www.daviscountyutah.gov/greatsaltlakebirdfest">Great Salt Lake Bird Festival</a>
+	</div>
+	<h1>Birds of the Wasatch Front</h1>
+	<div id="info">
+		<p>
+			Welcome to my visual bird journal. These are the migratory and non-migratory species that we are fortunate to see throughout the year in Utah. Click below to see the trail I take everyday, as well as on the markers to see an image and name of birds I see on the trail. Click the name of the bird more information.
+		</p>
+	</div>
+	<button onclick="theAnimation()">Click to see my walk!</button>
+	<div id="map">
+		<div id="animation"></div>
+		<div class="notes" id="point0">
+            <img src="Golden-crowned-2.jpg" alt="" />
+            <a href="gck.html">
+               Golden Crowned Kinglet
+            </a>
+      </div>
+
+      <div class="notes" id="point1">
+            <img src="RubyCrownedKinglet3.jpg" alt="" />
+            <a href="rck.html">
+               Ruby Crowned Kinglet
+           </a>
+      </div>
+
+      <div class="notes" id="point2">
+            <img src="golden eagle1.jpg" alt="" />
+            <a href="ge.html">
+				Golden Eagle
+	        </a>
+      </div>
+
+      <div class="notes" id="point3">
+            <img src="rock wren 2.jpg" alt="" />
+            <a href="rw.html">
+               Rock Wren
+            </a>
+      </div>
+
+      <div class="notes" id="point4">
+            <img src="townsends 1.jpg" alt="" />
+            <a href = "tw.html">
+               Townsend's Warbler
+            </a>
+      </div>
+	</div>
+	<script>
+	function theAnimation(){
+		var elem = document.getElementById("animation");
+		var leftpos = 688;
+		var toppos = 630;
+		var id = setInterval(frame, 10);
+		function frame(){
+			if(toppos <= 550 && toppos > 500){
+				leftpos--;
+				toppos--;
+				elem.style.top = toppos + 'px';
+				elem.style.left = leftpos + 'px';
+			} else if(toppos == 110){
+				clearInterval(id);
+			} else {
+				toppos--;
+				elem.style.top = toppos + 'px';
+				elem.style.left = leftpos + 'px';
+			}
+		}
+	}
+
+	</script>
+
+	<div id="form">
+		<p>Which species have YOU seen today?</p>
+		<table>
+			<tr>
+			<td>Golden Crowned Kinglet</td>
+			<td><input type="checkbox" id="box0" onclick="countspecies()"></td>
+			</tr>
+			<tr>
+			<td>Ruby Crowned Kinglet</td>
+			<td><input type="checkbox" id="box1" onclick="countspecies()"></td>
+			</tr>
+			<tr>
+			<td>Rock Wren</td>
+			<td><input type="checkbox" id="box2" onclick="countspecies()"></td>
+			</tr>
+			<tr>
+			<td>Golden Eagle</td>
+			<td><input type="checkbox" id="box3" onclick="countspecies()"></td>
+			</tr>
+			<tr>
+			<td>Townsend's Warbler</td>
+			<td><input type="checkbox" id="box4" onclick="countspecies()"></td>
+			</tr>
+			<tr>
+			<td>Western Scrub Jay</td>
+			<td><input type="checkbox" id="box5" onclick="countspecies()"></td>
+			</tr>
+			<tr>
+			<td>Black Capped Chickadee</td>
+			<td><input type="checkbox" id="box6" onclick="countspecies()"></td>
+			</tr>
+			<tr>
+			<td>Dark-eyed Junco</td>
+			<td><input type="checkbox" id="box7" onclick="countspecies()"></td>
+			</tr>
+			<tr>
+			<td>Cooper's Hawk</td>
+			<td><input type="checkbox" id="box8" onclick="countspecies()"></td>
+			</tr>
+			<tr>
+			<td>American Robin</td>
+			<td><input type="checkbox" id="box9" onclick="countspecies()"></td>
+			</tr>
+			<tr>
+			<td>Total number of species: </td>
+			<td id="species"></td>
+			</tr>
+		</table>
+	</div>
+	<script>
+		function countspecies(){
+			var total = 0;
+			if(document.getElementById("box0").checked == true){
+				total++;
+			}
+			if(document.getElementById("box1").checked == true){
+				total++;
+			}
+			if(document.getElementById("box2").checked == true){
+				total++;
+			}
+			if(document.getElementById("box3").checked == true){
+				total++;
+			}
+			if(document.getElementById("box4").checked == true){
+				total++;
+			}
+			if(document.getElementById("box5").checked == true){
+				total++;
+			}
+			if(document.getElementById("box6").checked == true){
+				total++;
+			}
+			if(document.getElementById("box7").checked == true){
+				total++;
+			}
+			if(document.getElementById("box8").checked == true){
+				total++;
+			}
+			if(document.getElementById("box9").checked == true){
+				total++;
+			}
+			document.getElementById("species").innerHTML = total;
+			console.log(total);
+		}
+	</script>
+	<div id="copyright">
+
+	</div>
+	<script>
+		var d = new Date();
+		var n = d.getFullYear();
+		document.getElementById("copyright").innerHTML = " ©" + n + " Dylan Waters";
+	</script>
+</body>
+</html>
